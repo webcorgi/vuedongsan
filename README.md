@@ -1,5 +1,7 @@
 # vuedongsan
 
+https://webcogy.github.io/vuedongsan/
+
 #### skill list
 
 - vue js
@@ -33,16 +35,20 @@ yarn lint
 
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
+### vue 깃페이지 배포방법 참고 (vue-gh-pages)
+
+https://github.com/KieferSivitz/vue-gh-pages
+
 ---
 
 ## 목차
 
 1. vue cli 설치
-2. vue 프로젝트 생성
-3. v-for
-4. v-if
-5. 이벤트 등록 v-on, @
-6. {{어쩌구}}, :어쩌구
+1. vue 프로젝트 생성
+1. v-for
+1. v-if
+1. 이벤트 등록 v-on, @
+1. {{어쩌구}}, :어쩌구
 
 ---
 
