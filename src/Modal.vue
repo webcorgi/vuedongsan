@@ -20,7 +20,19 @@ export default {
     data(){
         return{
             month:1, // 사용자가 input에 입력한 것은 전부 문자자료형
+            date:123
         }
+    },
+    watch:{
+      month(a){
+        // 사용자가 month에 입력한 데이터가 13보다 크면 alert창 띄우기
+        if( a >= 13 ){
+          alert('13이상 입력 ㄴㄴ')
+        }
+      },
+      date(){
+        
+      }
     },
     props:{
         rooms:Array, // array, Object, String, Number,Boolean (형식작성. 틀려도 에러안남. 걍 확인용임)

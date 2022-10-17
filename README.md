@@ -188,3 +188,89 @@ export default{
 1. @input="month = $event.target.value" // 파라미터 e == $event
 2. v-model="month" // v-model >> 1번의 약어.
 3. checkbox 는 true/false로도 받을 수 있음.
+
+## 11. watch 로 input value 실시간 감시
+
+```
+export default {
+  data(){
+    return{
+        month:1,
+    }
+  },
+  watch:{
+    month(a){
+      if( a >= 13 ){
+        alert('13이상 입력 ㄴㄴ')
+      }
+    },
+  }
+}
+```
+
+## 12. css 애니메이션 달기
+
+1. 일반적인 vue에서 애니메이션 넣기
+
+```
+// isShowPopup가 true일때 .end 추가
+<div class="start" :class="{end:isShowPopup}">
+
+.start{
+  opacity: 0;
+  transition:all 1s;
+}
+.end {
+  opacity: 1;
+}
+```
+
+2. transition 사용하기 (vue만의 문법임)
+
+```
+1. transition으로 감싸기
+<transition name="작명">
+
+2. class명 3개 작성 (입장 애니메이션)
+.작명-enter-from // 시작스타일
+.작명-enter-active  // transition
+.작명-enter-to  // 끝날때스타일
+
+3. class명 3개 작성 (퇴장 애니메이션)
+.작명-leave-from // 시작스타일
+.작명-leave-active  // transition
+.작명-leave-to  // 끝날때스타일
+```
+
+## 13. vue 라이프사이클
+
+1. create 단계
+2. mount 단계
+3. 컴포넌트 생성
+4. update 단계
+5. unmount 단계
+
+```
+// lifecycle hook 종류
+beforeCreate()
+created()
+beforeMount()
+mounted()
+beforeUpdate()
+updated()
+beforeUnmount()
+unmounted() 등등...
+
+
+export default {
+  ...
+  mounted(){
+    // 마운트 된 후에 실행할 소스
+  }
+}
+```
+
+※ 그래서 어디사용?
+
+- 서버에서 데이터 가져올때도 hook 안에 코드 짬
+- created(){} 안에 ajax 주로 사용함
